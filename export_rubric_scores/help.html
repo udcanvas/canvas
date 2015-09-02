@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Export Canvas Rubric Scores</title>
+<style>
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:medium;
+}
+.faq ul li{
+	list-style:none;
+	cursor:pointer;
+
+}
+li li{
+	color:red;
+}
+.faq ul li ul li{
+	list-style:circle;
+	cursor:default;
+	color:#000;
+}
+.faq ul li ol li{
+	list-style:decimal;
+	cursor:default;
+	color:#000;
+}
+.faq ul li p{
+	color:#000;
+	margin-left:
+}
+li.ui-state-error{
+	padding: 0.7em;
+	border-radius: 5px;
+	display: block;
+	list-style: none
+}
+strong{font-family: "Arial Black", Arial, sans-serif;}
+.ui-accordion .ui-accordion-header { padding:10px 30px}
+
+</style>
+<style>
+#left{width:240px;float:left;padding:5px;height:auto%; border:thick solid #2e6e9e;}
+.faq, ul,.ui-widget{padding:0;margin:0}
+#main{margin-right:10px;margin-left:280px;}
+.faq ul li ul li,.faq ul li ol li{list-style:none;
+font-weight:normal;}
+.faq ul li ol li{list-style:decimal;margin-left:10px}
+.faq ul li ul li{margin-left:10px};
+#acc div.faq ul{padding-left:6px};
+
+a.button{margin:4px;}
+h3.button{width:auto;display:inline-block;padding:8px 15px 8px 15px;margin-right:1em;}
+button{padding:7px 15px 7px 15px;font-size:110%;cursor:pointer}
+.faq ul.close-others li:first{padding-top:0;margin-top:0;}
+.faq ul li{font-weight:bold;cursor:pointer;padding-top:5px;margin-left:8px;}
+.ui-widget .faq ul li{margin-left:0}
+p.instructions{font-size:90%;background-color:#dfeffc;padding:8px;margin:0;border-top:#2e6e9e solid thin;border-bottom:#2e6e9e solid thin;font-family:Arial, Helvetica, sans-serif;}
+#left h3{margin-bottom:2;padding-bottom:0;}
+.ui-widget ul{padding-left:16px;margin-top:0;padding-top:0;}
+
+</style>
+<?php if($_GET['s']!=1): ?>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script src='https://apps.ats.udel.edu/peer/js/jquery-ui-1.8.15.custom.min.js'></script>
+<link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/redmond/jquery-ui.css' rel='stylesheet' type='text/css'>
+<?php endif ?>
+
+</head>
+
+<body>
+
+<div id="left"><h3>Glossary</h3>
+  <p class="instructions">Click on a term to reveal its definition</p>
+<div class="faq">
+<ul class="close-others glossary">
+  
+  
+   <li>API
+     <ul>
+       <li>An Application Programming Interface is a set of protocols for accessing features of one software application from another. </li>
+    </ul>
+   </li>
+  
+  
+  <li>Access Token
+    <ul>
+      <li>An access token is a security key that allows the holder to access a program's API. You should not issue tokens to organizations you do not trust! To see tokens you have issued, log into Canvas, and visit your account settings. All tokens created by this app will be named Single_Use_Rubric_Export. You can delete a token manually by clicking on the trash can icon to the right of its name.</li>
+      </ul>
+  </li>
+  
+    <li>Single-use token
+      <ul>
+        <li>The tokens you authorize for this application are temporary in the sense that they are not recorded  outside of Canvas. Once you delete them, as recommended, they will not be stored anywhere. </li>
+  </ul>
+  </li>
+  
+
+  <li>  </li>
+    <li>Reusable token
+      <ul>
+      <li>Some applications, such a Peer Evaluation and iClicker, store authorization tokens in a database for re-use. Such applications require only a single authorization action, which may even have been taken for you by a Canvas administrator. </li>
+      </ul>
+  </li>
+    <li>Instructor View
+      <ul>
+        <li>When an instructor visits an course in which this tool has been installed, he will see a new link in the course menu. Students will never see that link when logged in as themselves.</li>
+       
+        </ul>
+    </li>
+     <li>External Tool
+(aka App)
+  <ul>
+        <li>An application hosted outside of Canvas that conforms to the IMS LTI standard for interoperability. External Tools are installed by visiting the Apps tab within course Settings.</li>
+       
+        </ul>
+    </li>
+        <li>Logging out
+          <ul>
+        <li>Logging out of an LTI tool destroys the session data associated with that tool. In the case of the Rubric Export tool, it also deletes the single-use token.</li>
+       
+        </ul>
+    </li>
+      <li>    </li>
+    </ul>
+</div></div>
+<div id="main">
+<h3>Overview</h3>
+<p>When you choose to use a rubric in the context of a Canvas assignment, there is no easy way to perform statistical analyses of student performance on individual components. Currently the Canvas gradebook export data only includes the total grade for each assignment. This tool was built as a (hopefully) temporary work-around for those who need want more detailed information. </p>
+<p>Each time you enter an assignment url and click export, you will initiate a download of a .csv data that includes the most recently submitted rubric grades for each student. If you need data from more than one assignment, you will have to perform multiple exports. Aggregating data is left to the user.</p>
+<h3>How to Use this Page</h3>
+<p>The glossary on the left should help you understand what the features of the tool are, and how these are
+intended to be used. Step-by-Step instructions  and an FAQ can be located in the accordion panels below. Click on a panel's title to expand it. </p>
+
+<p/>
+<div id="acc">
+<h3>Demo</h3>
+<div id="demo"><iframe width="960" height="720" src="https://www.youtube-nocookie.com/embed/KtB5SS6-2DY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+<h3>Step-by-Step</h3>
+<div class="faq">
+<ul class="close-others">
+<li>Installation
+  <ol>
+  <li>Visit <a href="https://www.udel.edu/sakai/lti/secrets.html" target="_blank">https://www.udel.edu/sakai/lti/secrets.html</a> and locate the key : secret for the Rubric Export tool. You will need to provide your UDelNetID and password to access the page.</li>
+  <li>Launch Canvas, and browse to any course for which you have instructor access.</li>
+  <li>Click the Settings link located at the bottom of the Canvas navigation menu, located at the left side of the screen.</li>
+  <li>Click on the Apps tab.</li>
+  <li>Click the Export Rubric Scores button.</li>
+  <li>Click the blue Add Tool button.</li>
+  <li>In the window that pops up, enter the key and secret.</li>
+  <li>Refresh your browser, and look in your Canvas course menu for a new link. Only instructors and administrators can see the Export link, although it does not appear gray.</li>
+  </ol>
+</li>
+<li>Export data
+  <ol>
+  <li>In the Canvas navigation menu, click the Export Rubric Scores link. A blue U of Delaware Canvas access request will appear. Click log in to authorize access to your Canvas data.
+    <ol>
+      <li>This action will generate a Canvas API (Application Program Interface) authorization token. This is a single-use token, which will not be stored, and which you should delete (see below) once you have finished downloading your data. Because the token is not stored, you will need to re-authorize after  your app session has ended. This will occur when you:
+        <ol>
+          <li>Delete the token</li>
+          <li>Close your browser</li>
+          <li>Log out of any other UD hosted LTI app, such as Peer Evaluation, Post'Em, or reThinQ.</li>
+        </ol>
+      </li>
+      </ol>
+  </li>
+  <li>Once you have authorized, you will see a very simple web form. Paste the url of any Canvas Assignment that includes a scoring rubric into the Assignment URL field and click 'extract'.</li>
+  <li>Course ID and Assignment ID are extracted from the URL. These should appear as 5 - 10 digit numbers. If there is anything other than numbers in the fields, check your assignment url and try again.</li>
+  <li>If your ID numbers look okay, click submit to initiate the download.</li>
+  <li>Repeat as necessary to obtain data from other assignments. Data need NOT come from the particular course in which you installed the app.</li>
+  <li>When finished, use the 'Delete token' button to delete the token. Failure to do so will result in a clutter of useless tokens in your personal settings, but unless you leave your computer unattended, will not create a security issue.</li>
+  </ol>
+</li>
+<li></li>
+</ul>
+</div> <!-- close steps -->
+<h3>FAQ</h3>
+<div class="faq"> <p class="instructions">Click on a question to reveal its answer</p>
+<ul class="close-others">
+<li>How can I be sure that students will never be able to obtain data using this tool?
+  <ul>
+    <li>There are multiple safeguards for this. First, students will not be able to see the link. Second, students who click the link and authorize data access will not be able to access any data visible only in instructor view. For example, a student token does not have the power to reveal other students' grades.</li>
+  </ul></li>
+<li>Do I have to re-install every semester?
+  <ul>
+    <li>No. As long as you have access to the course in which you installed the app, you will be able to use it. At the end of the semester, it is a good idea to unpublish your course, but that should not prevent you from exporting data.</li>
+    </ul>
+</li>
+<li>Why does this tool appear in a course menu, rather than in my personal menu?
+  <ul>
+    <li>At some point, we may decide to install this for everyone, at which time we would move it to the User menu rather than the course menu. As of this date, we have chosen to make the tool available only for those who choose to install it. Canvas does not have a mechanism for installing User menu items individually.</li>
+  </ul>
+</li>
+</ul>
+</div><!-- close faq -->
+</div>
+ 
+<!--END ACCORDION-->
+
+</div><!--END MAIN-->
+
+<!-- <script type="text/javascript">window.jQuery || document.write("<script src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'>\x3C/script><script src='js/jquery-ui-1.8.15.custom.min.js'>\x3C/script><link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/redmond/jquery-ui.css' rel='stylesheet' type='text/css'>")</script>conditionally load js and css -->
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$(".faq ul:first").delegate("li","click",function(obj){
+		
+		if($(this).parent().hasClass("close-others") && $(this).children().is(':hidden') ){
+			
+			$(".faq ul li").children("ul,p").filter(':visible').toggle();
+			
+		}
+		$(this).children("ul,p").toggle();
+		
+		
+	});
+    $(".faq ul li").children("ul,p,ol").hide();
+	 $( "#acc" ).accordion({
+		active:0,
+		collapsible: true,
+		autoHeight:false
+		});
+		$("#acc div.faq ul:first li").children(':not(.show)').hide();
+		
+			$("#acc div.faq ul:first ").delegate("li","click",function(obj){
+		
+		if($(this).parent().hasClass("close-others") && $(this).children().is(':hidden') ){//
+			
+			$("#acc div.faq ul:first li").children().filter(':visible').toggle();
+			
+		}
+		$(this).children().toggle();
+		if($(this).children().is(':visible'))$(this).find(".show").show();
+		
+	});
+	 $.fn.extend({
+  sorter: function() {
+    return this.each(function() {
+      var sorted = $(this).children('li').sort(function(a,b) {
+        // Find the list items and sort them
+        return $(a).text().toLowerCase() >
+$(b).text().toLowerCase() ? 1 : -1;
+      });
+      $(this).append(sorted);
+    });
+  }
+});
+
+$("ul.glossary").sorter();
+    
+	
+});
+</script>
+
+
+</body>
+</html>

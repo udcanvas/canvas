@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Critboard @UD Help</title>
+<style>
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:medium;
+}
+.faq ul li{
+	list-style:none;
+	cursor:pointer;
+
+}
+.faq ul li ul li{
+	list-style:circle;
+	cursor:default;
+	color:#000;
+}
+.faq ul li ol li{
+	list-style:decimal;
+	cursor:default;
+	color:#000;
+}
+.faq ul li p{
+	color:#000;
+	margin-left:
+}
+
+.ui-accordion .ui-accordion-header { padding:10px 30px}
+
+</style>
+<style>
+#left{width:240px;float:left;padding:5px;height:auto%; border:thick solid #2e6e9e;}
+.faq, ul,.ui-widget{padding:0;margin:0}
+#main{margin-right:10px;margin-left:280px;}
+.faq ul li ul li,.faq ul li ol li{list-style:none; 
+font-weight:normal;}
+.faq ul li ol li{list-style:decimal;margin-left:10px}
+.faq ul li ul li{margin-left:10px};
+#acc div.faq ul{padding-left:6px};
+
+a.button{margin:4px;}
+h3.button{width:auto;display:inline-block;padding:8px 15px 8px 15px;margin-right:1em;}
+button{padding:7px 15px 7px 15px;font-size:110%;cursor:pointer}
+.faq ul.close-others li:first{padding-top:0;margin-top:0;}
+.faq ul li{font-weight:bold;cursor:pointer;padding-top:5px;margin-left:8px;}
+.ui-widget .faq ul li{margin-left:0}
+p.instructions{font-size:90%;background-color:#dfeffc;padding:8px;margin:0;border-top:#2e6e9e solid thin;border-bottom:#2e6e9e solid thin;font-family:Arial, Helvetica, sans-serif;}
+#left h3{margin-bottom:2;padding-bottom:0;}
+.ui-widget ul{padding-left:16px;margin-top:0;padding-top:0;}
+
+</style>
+<?php if($_GET['s']!=1): ?>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script src='https://apps.ats.udel.edu/peer/js/jquery-ui-1.8.15.custom.min.js'></script>
+<link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/redmond/jquery-ui.css' rel='stylesheet' type='text/css'>
+<?php endif ?>
+
+</head>
+
+<body>
+
+<div id="left"><h3>Glossary</h3>
+  <p class="instructions">Click on a term to reveal its definition</p>
+<div class="faq">
+<ul class="close-others glossary">
+  
+  
+   <li>Rubric Tabs
+     <ul>
+       <li>Rubric tabs divide the critboard page into any number of sub-divisions. Each tab is used to critique images along the dimension indicated by the tab's label. Since Critboard rubrics are intended to emerge during an in-class discussion, there is no relationship between the Critboard rubric and any Canvas rubric you may associate with the assignment, nor will your sort scores be entered as Canvas rubric scores.</li>
+      </ul>
+   </li>
+  
+  
+  <li>Save Crit
+    <ul>
+      <li>Use this button to preserve a copy of your sorts. Clicking this button will place an html page containing your current tabs in the Canvas File folder for your course. This button is available only in Instructor View.</li>
+      </ul>
+  </li>
+  
+    <li>Compile Grades
+      <ul>
+      <li>Use this button to push grades into the Canvas gradebook, based on the current sort status of the images. 5 points are awarded for each top shelf appearance, 3 for middle, 1 for bottom. This button is available only in Instructor View.</li>
+      </ul>
+  </li>
+  
+
+  <li>Full View
+    <ul>
+      <li>When you mouse over a thumbnail image, a full view link appears below it. Click this link for a better view of the image. The full view window is resizeable and draggable, and includes radio buttons for re-shelving, as well as a delete button. Deleting an image in one tab will automatically remove ALL copies of that image from all tabs.</li>
+      </ul>
+  </li>
+    <li>Student View
+      <ul>
+      <li>When a student enters the Critboard tool, he does NOT have an opportunity to perform a critique. He/she will see a grade distribution for the assignment if it has been graded, and links to any sorts that have been saved using the Save Crit feature.</li>
+      </ul>
+  </li>
+    <li>Instructor View
+      <ul>
+        <li>Only instructors can perform sorts, however, it is highly recommended that you do this during class, so that students can benefit from your reasoning, suggest new dimensions for critique, etc.</li>
+        </ul>
+    </li>
+    <li>Feature Requests
+      <ul>
+        <li>Are encouraged. You must be logged into our <a href="https://sites.google.com/a/udel.edu/critboard/feature-requests">Google site</a> to make a request.</li>
+      </ul>
+    </li>
+    </ul>
+</div></div>
+<div id="main">
+<h3>Overview</h3>
+<p>Critboard for Canvas@UD is designed to be used in conjunction with a Canvas Assignment requiring students to upload an image as their assignment submission. Submitted images can then be sorted based on criteria established during class. Sorting images during class gives all students a chance to better understand the criteria along which their submissions will be judged. The Critboard tool also streamlines the grading process, by assigning points for each category based on the shelf it is placed on.  </p>
+<h3>How to Use this Page</h3>
+<p>The glossary on the left should help you understand what the features of the tool are, and how these are
+intended to be used. Step-by-Step instructions for setting up and using the Critboard as well as an FAQ can be located in the accordion panels below. Click on a panel's title to expand it. </p>
+
+<p/>
+<div id="acc">
+<h3>Step-by-Step</h3>
+<div class="faq">
+<ul class="close-others">
+<li>Installing Critboard (at UD)
+<ol><li>Launch Canvas, and browse to the course in which you wish to use the Critboard</li>
+  <li>Click the Settings link located at the bottom of the Canvas navigation menu, located at the left side of the screen.</li>
+  <li>Click on the Apps tab.</li>
+  <li>Click the Critboard button, and take careful note of the key and secret, located at the bottom of the App description text.</li>
+  <li>Click the blue Add Tool button.</li>
+  <li>In the window that pops up, enter the key and secret.</li>
+  <li>Refresh your browser window, and check to see that a Critboard link has been added to the Canvas navigation menu.
+    <ol>
+      <li>To re-order the links in the navigation menu, visit the Navigation tab and drag the links to the desired locations.</li>
+      </ol>
+  </li>
+  </ol></li>
+  <li>Installing Critboard (at xxx.instructure.com)
+<ol>
+  <li>Request a key : secret by completing <a class="showme" target="_blank" href="https://docs.google.com/a/udel.edu/forms/d/1Eied4zqnaatKs67zBwumZwoFUfuUP3iXYgO08amiFVc/viewform">this form</a>. You will receive a key and secret via email. Please allow a few days for processing, as requests are vetted manually. UD LTI Apps are not available to for-profit institutions.</li>
+  <li>Once you have a key and secret, copy this xml configuration url onto your clipboard: https://apps.ats.udel.edu/canvas/critboard/critboard_shared.xml</li>
+  <li>Follow the instructions here: <a class="showme" target="_blank" href="https://community.canvaslms.com/docs/DOC-2725">How do I configure an External App for a course using a URL?</a>  
+    <ol>
+      <li>You will be asked to authorize use of a course-specific API token. You must accept the authorization request to use the app. Only click the accept (login, OK, submit...) button ONCE. There may be a brief delay while the process is completed.</li>
+      <li>When the installation is complete, you will see a mostly blank page asking you to select or create an assignment requiring a file upload submission. You are now ready to proceed to the next step.</li>
+    </ol>
+  </li>
+  </ol>
+  </li>
+<li>Create an Assignment 
+
+<ol>
+  <li>In the Canvas navigation menu, click the Assignments link. This should open even if the link appears gray. </li>
+  <li>Click the blue +Assignment button.</li>
+  <li>In the Create Assignments UI locate the Submission Type selector, and choose Online. Under entry options, select File Uploads. 
+    <ol>
+      <li>Optionally restrict File upload types to permite jpg, jpeg, gif, png.</li>
+    </ol>
+  </li>
+  <li>Configure the remaining assignment options as desired.</li>
+  <li>When you are ready, publish the assignment. Unpublished assignments will not be visible to students, even though as the instructor, you can see them.</li>
+  </ol></li>
+<li>Critique submitted images
+<ol>
+  <li>Click on the Critboard link in the navigation menu.</li>
+  <li>Select an assignment from the assignnment drop-down list. Only assignments that accept file upload submissions will appear in the list.
+    <ol>
+      <li>Submitted images will appear as thumbnails. </li>
+      </ol>
+  </li>
+  <li>Enter a comma delimited list of Rubric Tab titles in the Rubric Elements field. For instance, if you wish to critique submissions based on lighting, composition and use of negative space, your tab titles might be lighting, composition, negative space.</li>
+  <li>Click the Create Rubric Tabs button.
+    <ol>
+      <li>Tabs will appear. Click tabs to confirm that a copy of each uploaded image appears in each tab.</li>
+      </ol>
+  </li>
+  <li>Sort the images in each tab based on the criteria you have chosen. Best images should go on the top shelf, weaker ones on the bottom shelf. You can drag the images from shelf to shelf with your mouse, or use the open full link (visible on mouse-over) to view a larger version of any single image, and choose a shelf radio button.</li>
+  <li>Additional tabs can be added at any time by entering a single tab label, and clicking Add Tab.</li>
+  </ol></li>
+<li>Save your work
+<p>Once you have finished your critique, there are several ways to preserve a record of what you have done.</p>
+<ol>
+  <li>The Save Crit button will save a copy of your tabs to the Canvas file system. Links to each saved sort will be generated in the Student View of the Critboard Tool.</li>
+  <li>The Download Crit button can be used to download a copy of your tabs in an html file.</li>
+  <li>The Compile Grades tab will award each student 5 points for each top shelf appearance of his/her submitted image, 3 for the middle shelf, and 1 for the bottom. Grades will be posted directly to the Canvas gradebook. Rubric scores will appear as comments in the gradebook and speed grader.
+    <ol>
+      <li>If you do not see a Compile Grades button, it is likely that one or more of your students submitted multiple images. You must delete the extra image or images before compiling grades. To delete an image, locate the delete button, visible only in 'full view'.</li>
+    </ol>
+  </li>
+  </ol></li></ul>
+</div> <!-- close steps -->
+<h3>FAQ</h3>
+<div class="faq"> <p class="instructions">Click on a question to reveal its answer</p>
+<ul class="close-others">
+<li>I created an assignment with a submission type of file upload, and I can see it when I launch the Critboard, but my students can't see it. What's wrong?
+<ul><li>Be sure your assignment is published.</li>
+  </ul></li>
+<li>Why doesn't the Critboard create rubric tabs to match the rubric I created for my assignment in Canvas?
+<ul><li>This tool was designed for faculty who wish to critique images interactively with students. The philosophy is that rubrics should not be carved in stone before the critique even begins. We recommend NOT providing a Canvas rubric at all when creating an assignment to be used with this tool.</li>
+  </ul></li>
+</ul>
+</div><!-- close faq -->
+</div>
+ 
+<!--END ACCORDION-->
+
+</div><!--END MAIN-->
+
+<!-- <script type="text/javascript">window.jQuery || document.write("<script src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'>\x3C/script><script src='js/jquery-ui-1.8.15.custom.min.js'>\x3C/script><link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/redmond/jquery-ui.css' rel='stylesheet' type='text/css'>")</script>conditionally load js and css -->
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$(".faq ul:first").delegate("li","click",function(obj){
+		
+		if($(this).parent().hasClass("close-others") && $(this).children().is(':hidden') ){
+			
+			$(".faq ul li").children("ul,p").filter(':visible').toggle();
+			
+		}
+		$(this).children("ul,p").toggle();
+		
+		
+	});
+    $(".faq ul li").children("ul,p").hide();
+	 $( "#acc" ).accordion({
+		active:0,
+		collapsible: true,
+		autoHeight:false
+		});
+			$("#acc div.faq ul").delegate("li","click",function(obj){
+		
+		if($(this).parent().hasClass("close-others") && $(this).children().is(':hidden') ){
+			
+			$("#acc div.faq ul li").children().filter(':visible').toggle();
+			
+		}
+		$(this).children().toggle();
+		
+		
+	});
+	 $.fn.extend({
+  sorter: function() {
+    return this.each(function() {
+      var sorted = $(this).children('li').sort(function(a,b) {
+        // Find the list items and sort them
+        return $(a).text().toLowerCase() > 
+$(b).text().toLowerCase() ? 1 : -1;
+      });
+      $(this).append(sorted);
+    });
+  }
+});
+
+$("ul.glossary").sorter();
+    $("#acc div.faq ul li").children().hide();
+	$("a.showme").show();
+});
+</script>
+
+
+</body>
+</html>
