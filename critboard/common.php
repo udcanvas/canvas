@@ -23,6 +23,8 @@ ini_set('display_errors', 1);
 					$image_list[]=array(
 					'src'=>$attachment['url'],
 					'sid'=>$sid);
+					$sname = str_replace("'","\'",$submission['user']['sortable_name']);
+					$users[$sid] = '"' .$sname . '",'  . $submission['user']['login_id'];
 					$users[$sid] = '"' . $submission['user']['sortable_name']. '",'  . $submission['user']['login_id'];
 			
 				}

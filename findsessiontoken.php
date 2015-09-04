@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "/www/git/lti/canvasapi.php";
+include "/home/bkinney/public_html/canvas/canvasapi.php";
 //$_SESSION['token']['temp']=12335;
 //$tokentype = "context";
 $domain = $_REQUEST['custom_domain_url'];
@@ -81,7 +81,7 @@ if($token){
 	//print_r($_SESSION['token']);
 }else{
 	echo "<br>no session token, checking db";
-	if(!$link) include "/home/bkinney/includes/lti_mysqli.php";//re-establish link to db
+	if(!$link) include "/home/bkinney/public_html/canvas/lti_mysqli.php";//re-establish link to db
 	$token = getToken($link,$domain,$context_id,$tokentype);
 	if(!$token){//here is where we will trigger the dance
 	setcookie("domain",$domain,0,'/');

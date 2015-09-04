@@ -7,7 +7,7 @@ ini_set('display_errors', 1);
 
 //-----------all this will move to general include -----------------
 session_start();
-include "/home/bkinney/includes/lti_mysqli.php";
+include "../lti_mysqli.php";//not the right home
 require_once('../ims-blti/blti.php');//no token query here anymore - require_once was causing a problem?
 $context = new BLTI($secret,true,false);
 if($context->valid){
@@ -18,10 +18,10 @@ if($context->valid){
 			  
 				setcookie("context",$context_id,0,'/');
 				setcookie("isAdmin",$isAdmin,0,'/');
-				setcookie("lti_url","https://apps.ats.udel.edu" .$_SERVER['PHP_SELF'],0,'/');
+				setcookie("lti_url","https://tron.ats.udel.edu/~bkinney/" .$_SERVER['PHP_SELF'],0,'/');
 	
 	if(!isset($token)){
-		include "/www/git/lti/findsessiontoken.php";
+		include "../findsessiontoken.php";
 	}
 	if(isset($token)){
 		$api = new CanvasAPI($token,$domain,$context->info['custom_canvas_user_id']);
