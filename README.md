@@ -1,17 +1,7 @@
 # lti
 Re-organizing Becky's LTI tools for sharing and testing
 
-I want to set up a new folder structure for my LTI 1.1 tools. The plan is to organize the folders around the dependencies. I had thought that I could use a single include file for all LTI scenarios, but I've decided to back down from that and use separate include files for various scenarios. This makes it easier to debug one scenario without having to retest the others. Each of the folders in this repository targets a different scenario based on whether the tool requires a key:secret, whether it requires an API token, and whether it is going to be shared with other institutions. Sharing tools that require an API key is a dicey proposition, and maybe we shouldn't even be doing it, but I'm putting a folder in for it anyway.
+New plan-
 
-Folder list:
-
-anon - tools that don't even need a key and secret. Mostly editor buttons
-
-keysecret - tools that require ONLY a key and secret
-
-admin - inhouse tools that use an admin token
-
-context - tools that require a stored token. 1 token stored per context, even if the user is an admin
-
-temptoken - tools that request a new token for each launch, and then delete them
+Many of these tools operate under two scenarios, inhouse, and shared. The inhouse scenario uses a single admin token owned by udcanvas. The shared scenario requests a token for each course in which the tool is installed, and stored it in the tokens table of the lti database. In each tool folder, there should be three files, index.php, shared.php and common.php. The common file is included by both shared and index, and contains the bulk of the code. Merging the two existing shared and index files is one of the major steps involved in updating any existing tool. I use Beyond Compare for this, but there is probably some way to do it with Git as well.
 
