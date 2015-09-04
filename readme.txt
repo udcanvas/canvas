@@ -15,9 +15,9 @@ find   <lticm:property name="shared">1</lticm:property>  and DELETE
 
 php replacement paths - always replace site relative php paths FIRST
 
-site relative /www/git/lti/<folder> replaces /www/canvas/<folder> or /www/LTI436
+site relative /www/git/canvas/<folder> replaces /www/canvas/<folder> or /www/LTI436
 
-html replacements /git/lti/<folder> replaces /canvas/<folder>
+html replacements /git/canvas/<folder> replaces /canvas/<folder>
 
 check for strays: search for .php
 
@@ -48,8 +48,8 @@ mysql_result($result,0) -> mysqli_fetch_field($result)
 Category 3 - direct replacement, these are mostly those that took $result as a lone argument
 
 num_rows - direct conversion
-mysql_fetch_assoc - direct conversion
-mysql_fetch_array -direct conversion
+fetch_assoc - direct conversion
+fetch_array -direct conversion
 
 find: mysql_(fetch_assoc|fetch_array|num_rows) 
 

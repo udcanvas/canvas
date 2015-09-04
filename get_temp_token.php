@@ -47,7 +47,7 @@ setcookie('state',null,-1,'/');//delete state
 $url = "https://" . $_COOKIE['domain'] ."/login/oauth2/token";
 $postdata =  array(
 		"client_id" => 10000000000369,
-		"redirect_uri" => "https://apps.ats.udel.edu/git/lti/get_temp_token.php",
+		"redirect_uri" => "https://apps.ats.udel.edu/git/canvas/get_temp_token.php",
 		"client_secret" => "st1FSMA3hgkysbeE4ajmb4YPmy4nFRvfB9RfWaev7kKCSWswq4DR7sNxQsKto8iN",
 		"code" => $_REQUEST['code']
  

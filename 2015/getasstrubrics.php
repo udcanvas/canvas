@@ -64,7 +64,7 @@ function loadAssignment(cat){
 	currentEditor =$("div[id*=custominstructions]:visible");
     
 	
-	currentEditor.load("/git/lti/2014/getasstrubrics.php","json="+cat);
+	currentEditor.load("/git/canvas/2014/getasstrubrics.php","json="+cat);
 }
 
 </script>

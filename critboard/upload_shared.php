@@ -3,7 +3,7 @@ if(empty($_POST['folder'])){
 header('Content-Disposition: attachment; filename="Critboard:' . date("j-m-y")  . '.html"');
 }else{
 	
-	include "/www/git/lti/canvasapi.php";
+	include "/www/git/canvas/canvasapi.php";
 	function canvas_upload_critboard($data,$api){
 		$folderpath = "/critboard/".$_POST['folder'];
 		$handle2 = fopen("/home/bkinney/writable/temp.html","w");

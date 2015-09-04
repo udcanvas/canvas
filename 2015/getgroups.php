@@ -54,7 +54,7 @@ if($_GET['catid']){
 ?>
 <script>
 function loadCategory(cat){
-	$("#canvasgroups").load("/git/lti/2015/getgroups.php", "catid=" + cat,function(response){
+	$("#canvasgroups").load("/git/canvas/2015/getgroups.php", "catid=" + cat,function(response){
 		cloneGroups($(this).text());
 	});
 }

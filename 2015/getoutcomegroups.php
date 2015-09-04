@@ -67,10 +67,10 @@ currentEditor.text(url);
 	var url = "getoutcomegroups.php?catid=" + cat + "&cid=" + cid;
 	
 
-	currentEditor.load("/git/lti/2015/getoutcomegroups.php", "catid=" + cat + "&cid=" + cid);
+	currentEditor.load("/git/canvas/2015/getoutcomegroups.php", "catid=" + cat + "&cid=" + cid);
 }
 
 </script>
 
 
-<?php include "/www/git/lti/2015/getasstrubrics.php" ?>
+<?php include "/www/git/canvas/2015/getasstrubrics.php" ?>

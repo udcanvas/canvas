@@ -25,7 +25,7 @@ $from = $_SESSION['cas_data']['USER'] . "@udel.edu";
 		
 
   }else{
-	include "/www/git/lti/2015/timeout.php";
+	include "/www/git/canvas/2015/timeout.php";
 	echo "<p>You may wish to copy the contents of this email onto your system clipboard before refreshing. Otherwise, you will have to re-type your message. </p>";
 	die();
   }

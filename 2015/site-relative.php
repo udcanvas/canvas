@@ -67,7 +67,7 @@ if(isset($_POST['lis_person_sourcedid'])){
 
 if(array_key_exists("logout",$_GET)){
 
-	include "/www/git/lti/2015/logout.php";
+	include "/www/git/canvas/2015/logout.php";
 	
  //sets $usertype to loggedout, destroys session and cookies if any
 }else {	
@@ -80,7 +80,7 @@ if(array_key_exists("logout",$_GET)){
 	if(empty($_SESSION['redirect'])) $_SESSION['redirect']=$_SERVER['PHP_SELF'];
 	$secret="myrealsecret";
 	
-	if(!isset($loggedin)) include "/www/git/lti/auth-fork-token.php";
+	if(!isset($loggedin)) include "/www/git/canvas/auth-fork-token.php";
 	//$blti = $context->valid;
 	
 
@@ -327,7 +327,7 @@ overflow-x: hidden;}
   </div>
   
   <!--end new div all for flex-->
-  <?php include "/www/git/lti/2015/footer2.php" ?>
+  <?php include "/www/git/canvas/2015/footer2.php" ?>
 <script>
  if(window!=window.top){
 	 
@@ -343,7 +343,7 @@ overflow-x: hidden;}
 
 
 
-Welcome, <?php echo $firstName ?> <a href="/git/lti/index.php?logout=true">[ Log Out ]</a>
+Welcome, <?php echo $firstName ?> <a href="/git/canvas/index.php?logout=true">[ Log Out ]</a>
 <?php endif ?>
 
 </span>
@@ -366,7 +366,7 @@ Welcome, <?php echo $firstName ?> <a href="/git/lti/index.php?logout=true">[ Log
 	
 	</ul>
     <div id="logout"></div>
-    <div id="fachelp"><iframe width="100%" height="1500" scrolling="auto" src="/git/lti/2015/help3.php" style="border:none"></iframe> </div>
+    <div id="fachelp"><iframe width="100%" height="1500" scrolling="auto" src="/git/canvas/2015/help3.php" style="border:none"></iframe> </div>
     <div id="summaryview" class="fullheight"> 
 <h1>Feedback for <?php echo $firstName . " " . $lastName ?></h1>
 <div id="exportoptions" title="Export Options"  ></div>
@@ -428,7 +428,7 @@ Welcome, <?php echo $firstName ?> <a href="/git/lti/index.php?logout=true">[ Log
 <a href="#" onClick='wysiwyg("italic", this);'>ital</a>
 <a href="#" onClick="createLink()">link</a>
 </div><!--end .toolset -->
-<div id="custominstructions" contenteditable ><?php include "/www/git/lti/2015/defaultInstructions.php" ?></div><!-- end custominstructions-->
+<div id="custominstructions" contenteditable ><?php include "/www/git/canvas/2015/defaultInstructions.php" ?></div><!-- end custominstructions-->
     <blockquote><p class="instructions">The remaining fields will appear beneath the instructions in every evaluation, and can not be customized. Total score will be summed automatically as component scores are entered.</p>
     <p>
       Total score: 
@@ -447,7 +447,7 @@ Welcome, <?php echo $firstName ?> <a href="/git/lti/index.php?logout=true">[ Log
 <a href="#" onClick='wysiwyg("italic", this);'>ital</a>
 <a href="#" onClick="createLink()">link</a>
 </div><!--end .toolset -->
-<div id="pcustominstructions" contenteditable ><?php include "/www/git/lti/2015/pdefaultInstructions.php" ?></div><!-- end custominstructions-->
+<div id="pcustominstructions" contenteditable ><?php include "/www/git/canvas/2015/pdefaultInstructions.php" ?></div><!-- end custominstructions-->
     <blockquote><p class="instructions">The remaining fields will appear beneath the instructions in every evaluation, and can not be customized. Total score will be summed automatically as component scores are entered.</p>
     <p>
       Total score: 
@@ -578,14 +578,14 @@ Paste your roster below, and click 'use as roster'. Then drag members into empty
 	<ul>
         <li><a href="#studentview">My Projects</a></li>
         <li class="student"><a href="#summaryview">My Grades</a></li>
-        <li><a href="/git/lti/student-help.php" >Help</a></li>		
+        <li><a href="/git/canvas/student-help.php" >Help</a></li>		
 	<li><a href="#logout" >Log Out</a></li>
 	
 	</ul>
     <div id="logout"></div>	
 	<div id="summaryview" class="fullheight"> 
 <h1>Feedback for <?php echo $firstName . " " . $lastName ?></h1>
-		<div id="summaryResults"><?php include "/www/git/lti/2015/showGrades2.php" ?></div>
+		<div id="summaryResults"><?php include "/www/git/canvas/2015/showGrades2.php" ?></div>
     </div>
 	<div id="studentview" class="btns" ><h1 class="center" id="pagetitle">
 	<?php 
@@ -615,7 +615,7 @@ if($testing){
 	 
 	
 	echo '<div id="stuData">';
-	include "/www/git/lti/2015/studentData3.php";//new local file. compare with studentData3.php
+	include "/www/git/canvas/2015/studentData3.php";//new local file. compare with studentData3.php
 	echo '</div></div>';
 
 
@@ -762,7 +762,7 @@ if($testing){
         </div>
 
     </div>
-<?php include "/www/git/lti/2015/footer2.php" ?>
+<?php include "/www/git/canvas/2015/footer2.php" ?>
 
 </body>
 <script>
@@ -775,8 +775,8 @@ function clearInstructorForm(defaultGroup){
 			$("#submit").val("Create Project");
 		$("#projectName").val("");
 		$("#projectName-w").val("");
-		$("#custominstructions").load("/git/lti/2015/defaultInstructions.php");
-		$("#pcustominstructions").load("/git/lti/2015/pdefaultInstructions.php");
+		$("#custominstructions").load("/git/canvas/2015/defaultInstructions.php");
+		$("#pcustominstructions").load("/git/canvas/2015/pdefaultInstructions.php");
 		//$("#evalForm").children().val("");
 		//$("#idlist").text("");
 		setProjectType(0);
@@ -816,7 +816,7 @@ function email2(){
 	obj.fullname = $("#fullname").val();
 	obj.body= $("#body").val();
 	obj.subject = $("#subject").val();
-	$("#ajax").load("/git/lti/2015/email3.php",obj,function(response,status,xhr){
+	$("#ajax").load("/git/canvas/2015/email3.php",obj,function(response,status,xhr){
 		    if (response == "error") {
     var msg = "Sorry but there was an error: ";
 	
@@ -963,7 +963,7 @@ function showInstructorForm(n,deleteOrig,confirmed){
 		postdata.id=8000;
 		postdata.emplid = '<?php echo $_SESSION['cas_data']['EMPLID'] ?>';
 		
-		$("#custominstructions").load("/git/lti/2015/studentResults7.php",postdata,function(){//show person as evaluatee to get peer instructions
+		$("#custominstructions").load("/git/canvas/2015/studentResults7.php",postdata,function(){//show person as evaluatee to get peer instructions
 
 		
 				$("#evalForm").detach().appendTo("#evalview").show();
@@ -1009,7 +1009,7 @@ function showInstructorForm(n,deleteOrig,confirmed){
 			postdata.copy="true";
 			postdata.id=1;
 			postdata.emplid = '<?php echo $_SESSION['cas_data']['EMPLID'] ?>';
-			if(($(ref).attr("data-type"))!=0)$("#pcustominstructions").load("/git/lti/2015/studentResults7.php",postdata);//show product as evaluatee to get product instructions
+			if(($(ref).attr("data-type"))!=0)$("#pcustominstructions").load("/git/canvas/2015/studentResults7.php",postdata);//show product as evaluatee to get product instructions
 			enableDrag();
 		});
 	
@@ -1092,7 +1092,7 @@ function getNames(roster,groupname){
 	var data = new Object();
 	data.idlist=cleanlist;
 	
-	$("#ajax").load("/git/lti/2015/getNames3.php",data,function(response, status, xhr) {
+	$("#ajax").load("/git/canvas/2015/getNames3.php",data,function(response, status, xhr) {
 		 if (response.indexOf("LDAP error")>-1) {
 			 //alert(response);
 			  
@@ -1251,7 +1251,7 @@ function deleteProject(n){
 	var obj = new Object();
 	obj.id=n;
 	obj.emplid='<?php echo $_SESSION['cas_data']['EMPLID']; ?>';
-	$("#results").load("/git/lti/2015/profData5.php",obj,function(){
+	$("#results").load("/git/canvas/2015/profData5.php",obj,function(){
 		activegroup=null;														   
 		//window.location.reload();
 		testAs("faculty");
@@ -1264,7 +1264,7 @@ function toggleProject(n,b){
 	obj.active=b;
 	obj.id=n;
 	obj.emplid='<?php echo $_SESSION['cas_data']['EMPLID']; ?>';
-	$("#results").load("/git/lti/2015/profData5.php",obj,function(){
+	$("#results").load("/git/canvas/2015/profData5.php",obj,function(){
 		showGroup(activegroup,"eval",false);
 		testAs("faculty");
 		});
@@ -1364,7 +1364,7 @@ function showGroup(n,prefix,reopen){
 $("#email").html('<h3 class="ui-widget-header ui-corner-top">Email Project Members</h3><iframe  src="/peer/2014/email2_1.php?projectID='+n+'&from=<?php echo $udelnetid ?>@udel.edu&fullname=<?php echo $firstName . ' ' . $lastName ?>&projName='+$(ref).text() +'&redirect=/peer/2014/student.php" height="350" width="96%" frameborder="0" marginheight="0" marginwidth="0"></iframe>').hide();*/
 $("#email").html('<h3 class="ui-widget-header ui-corner-top">Email Project Members</h3><div id="delay" data-get="projectID='+n+'&from=<?php echo $udelnetid ?>@udel.edu&fullname=<?php echo $firstName . ' ' . $lastName ?>&projName='+$(ref).text() +'&redirect=/peer/student.php" class="errmsg">Loading your email groups. This may take a second or two.</div>').hide();
 
-$("#summary").html('<h3 class="ui-widget-header ui-corner-top">Project Summary</h3><iframe  src="/git/lti/2015/summaryTable9.php?proj='+n+'&facid=<?php echo $facid ?>" height="640" width="96%" frameborder="0" marginheight="0" marginwidth="0"></iframe>');
+$("#summary").html('<h3 class="ui-widget-header ui-corner-top">Project Summary</h3><iframe  src="/git/canvas/2015/summaryTable9.php?proj='+n+'&facid=<?php echo $facid ?>" height="640" width="96%" frameborder="0" marginheight="0" marginwidth="0"></iframe>');
 
 			//$("#email").show();
 		}
@@ -1382,7 +1382,7 @@ $("#summary").html('<h3 class="ui-widget-header ui-corner-top">Project Summary</
 		if(activegroup != null){
 		$("#results").html('<h3 class="ui-widget-header ui-corner-top">Project Options</h3><p>Select a student or product to view evaluations.</p>').show();	
 		$("#optionsview").html('<a class="email" href="#" onclick="populateEmail()">Notify</a><a href="#" class="pencil2" onclick="showInstructorForm('+n+',true)">Edit</a><a href="#" class="copy" onclick="showInstructorForm('+n+')">Copy</a><a href="#" class="delete" onclick="activeGroup='+n+';$(\'#confirmDelete\').dialog(\'open\')">Delete</a>').addClass("btns");
-		$("#exportview").html('<a href="#" onclick="showGroups('+n+')" class="groups" >Show Groups</a><a class="grades" href="#" onclick="exportOptions('+n+',\'<?php echo $facid ?>\')">Export Grades</a><a class="summary" href="#" onclick="exportAnalytics('+n+',\'<?php echo $facid ?>\')">Analytics</a><a href="/git/lti/2015/summaryTable9.php?proj=' + n + '&disposition=download&facid=<?php echo $facid ?>" class="summary" >Export Summary</a>');
+		$("#exportview").html('<a href="#" onclick="showGroups('+n+')" class="groups" >Show Groups</a><a class="grades" href="#" onclick="exportOptions('+n+',\'<?php echo $facid ?>\')">Export Grades</a><a class="summary" href="#" onclick="exportAnalytics('+n+',\'<?php echo $facid ?>\')">Analytics</a><a href="/git/canvas/2015/summaryTable9.php?proj=' + n + '&disposition=download&facid=<?php echo $facid ?>" class="summary" >Export Summary</a>');
 		$("#tabs").tabs("enable",1);
 		
 			if($(ref).hasClass("archived")){
@@ -1552,7 +1552,7 @@ function compileAndSubmit(){
 	//alert(all);
 	if(obj.projectName && obj.roster){
 		obj.emplid='<?php echo $_SESSION['cas_data']['EMPLID']; ?>';
-	$("#results").load("/git/lti/2015/profData5.php",obj,function(){
+	$("#results").load("/git/canvas/2015/profData5.php",obj,function(){
 		//$("#projectName, #idlist").removeClass("ui-state-highlight");
 		//$("#evalForm").hide();
 		//if(trashme) deleteProject(trashme);
@@ -1587,8 +1587,8 @@ function testAs(s){
 		$(".student").show();
 		var obj = new Object();
 		obj.emplid="<?php echo $_SESSION['cas_data']['EMPLID'] ?>";//check against itself in showGrades2.php
-		$("#summaryResults").load("/git/lti/2015/showGrades2.php",obj);
-		$("#stuData").load("/git/lti/2015/studentData3.php",obj,function(){
+		$("#summaryResults").load("/git/canvas/2015/showGrades2.php",obj);
+		$("#stuData").load("/git/canvas/2015/studentData3.php",obj,function(){
 			$("#pagetitle").html("Peer Evaluation: <?php echo  $firstName . " " . $lastName ?>").prependTo($("#studentview"));
 			initList();
 		});
@@ -1610,7 +1610,7 @@ function testAs(s){
 		var obj = new Object();
 		obj.facid='<?php echo $facid ?>';
 		obj.emplid='<?php echo $_SESSION['cas_data']['EMPLID']; ?>';
-		$("#facdata").load("/git/lti/2015/profData5.php",obj,function(){
+		$("#facdata").load("/git/canvas/2015/profData5.php",obj,function(){
 			initList();
 		});
 	}
@@ -1681,7 +1681,7 @@ function submitMe(btn){
 				var testbool = $.isNumeric(testnum);
 				obj.emplid='<?php echo $_SESSION['cas_data']['EMPLID']; ?>';
 
-	if(testbool  && obj.grade>=0 && obj.grade<=maxscore){$("#ajax").load("/git/lti/2015/submitEval.php",obj,function(a,status,c){
+	if(testbool  && obj.grade>=0 && obj.grade<=maxscore){$("#ajax").load("/git/canvas/2015/submitEval.php",obj,function(a,status,c){
 		$("input[name=grade]").removeClass("ui-state-highlight");
 		if(a == "Thank you"){//I don't know how to set status to failure
 			//alert($("#ajax").html());
@@ -1937,7 +1937,7 @@ $(document).ready(function(e) {
 			}//bypass warning if cookie is set
 			
         });
-	$(".step").find("p:eq(0)").append(' <button> <a href="/git/lti/2015/help3.php" title="open help in new window" target="help"> ? </a></button>');
+	$(".step").find("p:eq(0)").append(' <button> <a href="/git/canvas/2015/help3.php" title="open help in new window" target="help"> ? </a></button>');
 	jQuery.fn.sort = function() {  
   	 return this.pushStack( [].sort.apply( this, arguments ), []);  
  	};  
@@ -2756,7 +2756,7 @@ params  = 'width='+screen.width*.9;
 
  params += ', scrollbars=1';
  params += ', resizable=1';
-	window.open("/git/lti/2015/studentGroups.php?proj="+n,"popup",params,false);
+	window.open("/git/canvas/2015/studentGroups.php?proj="+n,"popup",params,false);
 }//fun validateinstructions
 ////////////	
 function submitAllSummaries(){
@@ -2803,10 +2803,10 @@ function releaseGrades(tiny){
 	pd.status=tiny;
 	pd.emplid='<?php echo $_SESSION['cas_data']['EMPLID']; ?>';
 	//var datastr = "submitAll=true&type=eva&evaluator=<?php echo $facid ?>&emplid=<?php echo $facid ?>&survey="+activegroup + "&status=" + tiny;
-	$("#results").load("/git/lti/2015/studentResults7.php",pd,function(){
+	$("#results").load("/git/canvas/2015/studentResults7.php",pd,function(){
 		var obj = new Object();
 		obj.emplid='<?php echo $_SESSION['cas_data']['EMPLID']; ?>';//refresh the projects menu
-					$("#facdata").load("/git/lti/2015/profData5.php",obj,function(){//profData4s
+					$("#facdata").load("/git/canvas/2015/profData5.php",obj,function(){//profData4s
 			//initList();
 			testAs("faculty");
 			if(tiny){
@@ -2887,7 +2887,7 @@ $("ul.formlist ul").delegate("li:not('.label,.archived')","click",function(e){
 		//$("#rtitle").text("Your evaluation of " + $(e.target).text());
 		}
 		pd.emplid='<?php echo $_SESSION['cas_data']['EMPLID'] ?>';
-		$("#results").load("/git/lti/2015/studentResults7.php",pd,function(){$("#results").show();
+		$("#results").load("/git/canvas/2015/studentResults7.php",pd,function(){$("#results").show();
 		$("#subtitle").text("Results for " + stuname);
 		 $("body").css("cursor","default");
 		 $("ul.formlist ul li:not(.label)").removeAttr("style");
@@ -2941,7 +2941,7 @@ $("ul.formlist ul").delegate("li:not('.label,.archived')","click",function(e){
  * loads emailgroup.php into an iframe inside #email
 */
 function emailGroup(n){
-	$("#email").html('<a  href="#" class="btn rounded exit" onclick=\'$("#email").hide()\'>X</a><iframe src="/git/lti/2015/emailgroup.php?projectID='+n+'" height="300" width="600" frameborder="0" ></iframe>').show();
+	$("#email").html('<a  href="#" class="btn rounded exit" onclick=\'$("#email").hide()\'>X</a><iframe src="/git/canvas/2015/emailgroup.php?projectID='+n+'" height="300" width="600" frameborder="0" ></iframe>').show();
 }
 /**
  * function exportOptions(n,f)
@@ -2993,7 +2993,7 @@ function populateEmail(){
 		var obj = get2obj(data);
 		obj.emplid = '<?php echo $_SESSION['cas_data']['EMPLID'] ?>';
 		console.log(obj);
-		$("#delay").load("/git/lti/2015/email2_1.php",obj,function(){
+		$("#delay").load("/git/canvas/2015/email2_1.php",obj,function(){
 			$(this).removeClass("errmsg");
 			});
 	}

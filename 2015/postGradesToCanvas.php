@@ -23,7 +23,7 @@ if($_SESSION['facid'] == $_GET['facid']){//identity confirmed//valid login
 		echo '<p>status: ' . $queueStatus['workflow_state'];
 		echo '</p><p>percent completed: ' . $queueStatus['completion'] . '</p>';
 			if($queueStatus['completion']*1<100){
-			echo '<a href="/git/lti/2015/postGradesToCanvas.php?endpoint='. $endpoint.'&facid=' . $_GET['facid'].'" >Check again</a>';
+			echo '<a href="/git/canvas/2015/postGradesToCanvas.php?endpoint='. $endpoint.'&facid=' . $_GET['facid'].'" >Check again</a>';
 			//<a title="automatically create and populate a Canvas gradebook column with summary grades and comments" href="/peer/2015/postGradesToCanvas.php?proj=' . $_GET['proj']. . '&maxscore=' . $maxscore . '" target="canpost">
 		}
 		exit();
@@ -98,7 +98,7 @@ if(mysqli_num_rows($result)){
 	//echo $args;
 $update = $api->post_canvas($args,"POST");
 		//echo '<br>';
-		if($update)echo 'Your grades have been queued for posting. If you have a large student roster, it may take a few minutes to complete. You may safely exit this interface or close your browser without interrupting the update.  <a href="/git/lti/2015/postGradesToCanvas.php?facid=' . $_GET['facid'] . '&endpoint='.$update['url'].'">Check status</a>';
+		if($update)echo 'Your grades have been queued for posting. If you have a large student roster, it may take a few minutes to complete. You may safely exit this interface or close your browser without interrupting the update.  <a href="/git/canvas/2015/postGradesToCanvas.php?facid=' . $_GET['facid'] . '&endpoint='.$update['url'].'">Check status</a>';
 		
 }else{//close if result
   echo mysqli_error($link);

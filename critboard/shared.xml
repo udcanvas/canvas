@@ -8,13 +8,13 @@
     http://www.imsglobal.org/xsd/imsbasiclti_v1p0 http://www.imsglobal.org/xsd/lti/ltiv1p0/imsbasiclti_v1p0.xsd
     http://www.imsglobal.org/xsd/imslticm_v1p0 http://www.imsglobal.org/xsd/lti/ltiv1p0/imslticm_v1p0.xsd
     http://www.imsglobal.org/xsd/imslticp_v1p0 http://www.imsglobal.org/xsd/lti/ltiv1p0/imslticp_v1p0.xsd">
-    <blti:launch_url>https://apps.ats.udel.edu/git/lti/critboard/shared.php</blti:launch_url>
+    <blti:launch_url>https://apps.ats.udel.edu/git/canvas/critboard/shared.php</blti:launch_url>
     <blti:title>Critboard</blti:title>
     <blti:description>Critboard for Canvas is designed to be used in conjunction with a Canvas Assignment. Use this app to collaboratively critique student work (images only) uploaded to Canvas as an assignment submission. You may sort on multiple criteria. Each criterion will appear on its own tab, and sort orders are independent. When used as a grading tool, points are awarded per shelf, per tab. This app requires an instructor authorization token.</blti:description>
     <blti:extensions platform="canvas.instructure.com">
       <lticm:property name="privacy_level">public</lticm:property>
       <lticm:options name="course_navigation">
-        <lticm:property name="url">https://apps.ats.udel.edu/git/lti/critboard/shared.php</lticm:property>
+        <lticm:property name="url">https://apps.ats.udel.edu/git/canvas/critboard/shared.php</lticm:property>
         <lticm:property name="link_text"></lticm:property>
         <lticm:property name="visibility">public</lticm:property>
         <lticm:property name="default">enabled</lticm:property>

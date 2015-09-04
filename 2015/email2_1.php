@@ -30,7 +30,7 @@ $from = $_SESSION['cas_data']['USER'] . "@udel.edu";
     if( $from == $_REQUEST['from'] || $from == $_POST['from']){
 
   }else{
-	include "/git/lti/2015/timeout.php";
+	include "/git/canvas/2015/timeout.php";
 	die();
   }
   
@@ -115,7 +115,7 @@ mysqli_close($link);
   }
  ?>
 
-</p><form name="notifygroup" method="post" action="/git/lti/2015/email2_1.php" target="frame">
+</p><form name="notifygroup" method="post" action="/git/canvas/2015/email2_1.php" target="frame">
    
   <p>
     <input type="hidden" value=<?php echo $_SERVER['QUERY_STRING'] ?> name="getstr"/>
