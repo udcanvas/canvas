@@ -34,10 +34,10 @@ echo '<div style="color:#014598">';
 
 
 if(true){//$ptype==0 - categories get a bit weird if both, but we'll let users sort that out for themselves
-	echo '<p title="This generates a large file containing all student submitted rubric scores, but no comments." ><span style="color:orange">NEW!</span> <a href="/git/lti/2015/exportCategories.php?proj=' . $_GET['proj']  .  '&facid=' . $_GET['facid'] . '">Download Peer Category Scores by Group</a></p>';
+	echo '<p title="This generates a large file containing all student submitted rubric scores, but no comments." ><span style="color:orange">NEW!</span> <a href="/git/canvas/2015/exportCategories.php?proj=' . $_GET['proj']  .  '&facid=' . $_GET['facid'] . '">Download Peer Category Scores by Group</a></p>';
 	}
 	if($ptype==0){//this won't work well when product evals are required
-	echo '<p title="Data for comparing the number of peer evaluations completed by each student against his/her group size. Please note that the required submissions will be one less than the group size when self-evaluation is not required." ><span style="color:orange">NEW!</span> <a href="/git/lti/2015/accountability.php?proj=' . $_GET['proj']  .  '&facid=' . $_GET['facid'] . '">Download Compliance Data</a></p>';
+	echo '<p title="Data for comparing the number of peer evaluations completed by each student against his/her group size. Please note that the required submissions will be one less than the group size when self-evaluation is not required." ><span style="color:orange">NEW!</span> <a href="/git/canvas/2015/accountability.php?proj=' . $_GET['proj']  .  '&facid=' . $_GET['facid'] . '">Download Compliance Data</a></p>';
 	}
 echo '</div>';	
 mysqli_close($link);

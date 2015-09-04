@@ -4,9 +4,9 @@ find and replace all file paths for both html and php
 
 php replacement paths - always replace site relative php paths FIRST
 
-site relative /www/git/lti/<folder> replaces /www/canvas/<folder> or /www/LTI436
+site relative /www/git/canvas/<folder> replaces /www/canvas/<folder> or /www/LTI436
 
-html replacements /git/lti/<folder> replaces /canvas/<folder>
+html replacements /git/canvas/<folder> replaces /canvas/<folder>
 
 check for strays: search for .php
 

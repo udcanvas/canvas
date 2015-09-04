@@ -177,7 +177,7 @@ intended to be used. For text-based instructions on the use of an individual fea
     <li>Fix all known bugs - if you know of an outstanding bug, PLEASE take the time to report it! </li>
   </ul>
 </div>
-<h3 class="ui-accordion-header ui-state-default ui-corner-all button" ><a href="https://sites.google.com/a/udel.edu/peer/features-for-testing/2014s-bugs" target="google">Report a Problem</a> </h3><h3 class="ui-accordion-header ui-state-default ui-corner-all button" ><a href="/git/lti/2015/help3.php" target="help">Open Help in new Window</a> </h3><hr>
+<h3 class="ui-accordion-header ui-state-default ui-corner-all button" ><a href="https://sites.google.com/a/udel.edu/peer/features-for-testing/2014s-bugs" target="google">Report a Problem</a> </h3><h3 class="ui-accordion-header ui-state-default ui-corner-all button" ><a href="/git/canvas/2015/help3.php" target="help">Open Help in new Window</a> </h3><hr>
 
 <div id="acc">
 
@@ -193,10 +193,10 @@ intended to be used. For text-based instructions on the use of an individual fea
     
     
   </p>
-  <p><a href="/git/lti/demos/Student Notification/index.html" target="media">Student Notification</a></p>
-  <p><a href="/git/lti/demos/Student View/" target="media">Student View</a></p>
-  <p><a href="/git/lti/demos/Summary Evaluations/" target="media">Summary Evaluations</a> (instructor approved)</p>
-  <p><a href="/git/lti/demos/Wrap-up/" target="media">Wrapping Up</a></p>
+  <p><a href="/git/canvas/demos/Student Notification/index.html" target="media">Student Notification</a></p>
+  <p><a href="/git/canvas/demos/Student View/" target="media">Student View</a></p>
+  <p><a href="/git/canvas/demos/Summary Evaluations/" target="media">Summary Evaluations</a> (instructor approved)</p>
+  <p><a href="/git/canvas/demos/Wrap-up/" target="media">Wrapping Up</a></p>
   <p><a href="https://docs.google.com/presentation/d/1z1ae-Lnndm3-VzQeUZQUPxUApqX7egGq8B74nc1OT64/pub?start=true&loop=false&delayms=5000" target="media">Promotional Screenshots</a></p>
   <p>&nbsp;</p>
 </div>

@@ -21,7 +21,7 @@ if($context->valid){
 				setcookie("lti_url","https://apps.ats.udel.edu" .$_SERVER['PHP_SELF'],0,'/');
 	
 	if(!isset($token)){
-		include "/www/git/lti/findsessiontoken.php";
+		include "/www/git/canvas/findsessiontoken.php";
 	}
 	if(isset($token)){
 		$api = new CanvasAPI($token,$domain,$context->info['custom_canvas_user_id']);
@@ -32,7 +32,7 @@ if($context->valid){
 			
 			echo "I have an invalid token. Try <a href='../logout.php'>logging out</a>";
 			echo "<p>You seem to have deleted a token. The one we have is invalid. You may re-authorize by completing the form below</p>";
-			include "/www/git/lti/dance.php";
+			include "/www/git/canvas/dance.php";
 			//logout has a link back here, but session gets lost - what to do?
 		}
 	}else{

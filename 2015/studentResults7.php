@@ -173,7 +173,7 @@ foreach($roster as $stuid){
 			//echo $custom;
 			if($submitAll){
 				//$evaluator=$facid;
-				include "/www/git/lti/2015/submitEval2.php";
+				include "/www/git/canvas/2015/submitEval2.php";
 			}else{
 				include "/home/bkinney/includes/studentform5.php";
 			//echo $accepted . "case3";

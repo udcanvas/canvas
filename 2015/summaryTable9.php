@@ -13,7 +13,7 @@ if($_SESSION['facid'] == $_GET['facid']){
 	
 }else{//reauthenticate
 //print_r($_SESSION);
-include "/www/git/lti/2015/timeout.php";
+include "/www/git/canvas/2015/timeout.php";
 die();
 }
 

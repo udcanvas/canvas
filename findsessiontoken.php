@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "/www/git/lti/canvasapi.php";
+include "/www/git/canvas/canvasapi.php";
 //$_SESSION['token']['temp']=12335;
 //$tokentype = "context";
 $domain = $_REQUEST['custom_domain_url'];

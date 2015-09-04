@@ -28,20 +28,20 @@ echo '<p >Grade downloads will contain only grades that the instructor has APPRO
 //echo '<p> can? = '. $facid  .strpos($facid,'can') . '</p>';
 if($ptype!=1 && strpos($facid,'can')!== false){
 	
-	echo '<p><span style="color:orange">NEW! </span><a title="automatically create and populate a Canvas gradebook column with summary grades and comments" href="/git/lti/2015/postGradesToCanvas.php?proj=' . $_GET['proj']. '&facid=' . $_GET['facid']. '&maxscore=' . $maxscore . '" target="canpost">Post Peer Grades to Canvas Gradebook</a></p><iframe src="/git/lti/2015/pending.html" id="canpost" name="canpost" width="100%" height="80" border="0" scrolling="auto"></iframe>';
+	echo '<p><span style="color:orange">NEW! </span><a title="automatically create and populate a Canvas gradebook column with summary grades and comments" href="/git/canvas/2015/postGradesToCanvas.php?proj=' . $_GET['proj']. '&facid=' . $_GET['facid']. '&maxscore=' . $maxscore . '" target="canpost">Post Peer Grades to Canvas Gradebook</a></p><iframe src="/git/canvas/2015/pending.html" id="canpost" name="canpost" width="100%" height="80" border="0" scrolling="auto"></iframe>';
 }
-echo '<p><a href="/git/lti/2015/exportCanvas.php?type=0&proj=' . $_GET['proj']. '&facid=' . $_GET['facid']. '&maxscore=' . $maxscore . '" title="Export Canvas compliant csv. You will not need this link if you are launching Peer Evaluation from within Canvas. This legacy download includes grades, but not comments.">Download Peer Grades for Canvas</a></p>';
+echo '<p><a href="/git/canvas/2015/exportCanvas.php?type=0&proj=' . $_GET['proj']. '&facid=' . $_GET['facid']. '&maxscore=' . $maxscore . '" title="Export Canvas compliant csv. You will not need this link if you are launching Peer Evaluation from within Canvas. This legacy download includes grades, but not comments.">Download Peer Grades for Canvas</a></p>';
 if($ptype !=1){
-	echo '<p><a href="/git/lti/2015/exportSakai6.php?type=0&proj=' . $_GET['proj']  .  '&maxscore2=' . $maxscore_p . '&facid=' . $_GET['facid'] . '">Download Peer Grades with Comments</a></p>';
+	echo '<p><a href="/git/canvas/2015/exportSakai6.php?type=0&proj=' . $_GET['proj']  .  '&maxscore2=' . $maxscore_p . '&facid=' . $_GET['facid'] . '">Download Peer Grades with Comments</a></p>';
 	
 }
 echo '<div style="color:#014598">';
 if ($ptype!=0){
-	echo '<p><a href="/git/lti/2015/exportSakai6.php?type=1&proj=' . $_GET['proj'] . '&maxscore=' . $maxscore .  '&maxscore2=' . $maxscore_p .  '&facid=' . $_GET['facid'] . '">Download Product Grades</a> (instructor submitted)</p>';
-	echo '<p><a href="/git/lti/2015/exportSakai6.php?type=1.5&proj=' . $_GET['proj'] . '&maxscore=' . $maxscore .  '&maxscore2=' . $maxscore_p .  '&facid=' . $_GET['facid'] . '">Download Product Evaluations</a> (all student submissions)</p>';
+	echo '<p><a href="/git/canvas/2015/exportSakai6.php?type=1&proj=' . $_GET['proj'] . '&maxscore=' . $maxscore .  '&maxscore2=' . $maxscore_p .  '&facid=' . $_GET['facid'] . '">Download Product Grades</a> (instructor submitted)</p>';
+	echo '<p><a href="/git/canvas/2015/exportSakai6.php?type=1.5&proj=' . $_GET['proj'] . '&maxscore=' . $maxscore .  '&maxscore2=' . $maxscore_p .  '&facid=' . $_GET['facid'] . '">Download Product Evaluations</a> (all student submissions)</p>';
 }
 if ($ptype==2){
-	echo '<p><a href="/git/lti/2015/exportSakai6.php?type=2&proj=' . $_GET['proj'] . '&maxscore=' . $maxscore .  '&maxscore2=' . $maxscore_p .  '&facid=' . $_GET['facid'] . '">Download Combined Grades</a></p>';
+	echo '<p><a href="/git/canvas/2015/exportSakai6.php?type=2&proj=' . $_GET['proj'] . '&maxscore=' . $maxscore .  '&maxscore2=' . $maxscore_p .  '&facid=' . $_GET['facid'] . '">Download Combined Grades</a></p>';
 }
 
 echo '</div>';	

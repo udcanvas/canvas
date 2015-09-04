@@ -16,7 +16,7 @@ session_start();
 $from = $_SESSION['cas_data']['USER'] . "@UDel.Edu";
 
     if( empty($_SESSION['cas_data']['USER'])){
-		include "/www/git/lti/2015/timeout.php";
+		include "/www/git/canvas/2015/timeout.php";
 	die();
   }
   
@@ -34,7 +34,7 @@ $success = mail($_POST['to'],$_POST['subject'],$_POST['body'],$headers);
 if($success){
 	echo "<p>Your message has been sent.</p>";
 	ini_set("sendmail_from","ats-staff@udel.edu");
-	echo '<p><a href="/git/lti/2015/emailgroup.php?'. $_POST['getstr'] . '">Send another</a></p></body></html>';
+	echo '<p><a href="/git/canvas/2015/emailgroup.php?'. $_POST['getstr'] . '">Send another</a></p></body></html>';
 	exit();
 }
   }

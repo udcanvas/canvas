@@ -54,7 +54,7 @@ function cloneGroups(json){
 function loadCanvasRoster(cid){
 	if(cid){
 		$("#canvasgroups").dialog("close");
-		$("#ajax").load("/git/lti/2015/getroster.php","courseid=" + cid,function(response,success,xhr){
+		$("#ajax").load("/git/canvas/2015/getroster.php","courseid=" + cid,function(response,success,xhr){
 			$('.temp ul:first').addClass("troster").prepend(response);
 			var oldmembers = $("#groups").html();
 			var msg=false;
