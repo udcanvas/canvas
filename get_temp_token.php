@@ -35,7 +35,7 @@ function curl_post($url, array $post = NULL, array $options = array())
     return $result;
 }
 //so, there are steps to the dance. Step 1, we redirect, and Canvas posts back to us this page is the redirect page we sent in step one, initiated in one of the canvas_dance scripts.
-	
+require_once("/home/bkinney/includes/dkey.php");//this sits above the html root and provides my developer id and secret	
 if($_REQUEST['error']){//something is wrong, write it out
 	die($_REQUEST['error']);
 }else if(isset($_REQUEST['code'])){//now we exchange the code for a token. See docs
@@ -46,9 +46,9 @@ if(array_key_exists('state',$_REQUEST) && $_REQUEST['state'] != $_COOKIE['state'
 setcookie('state',null,-1,'/');//delete state
 $url = "https://" . $_COOKIE['domain'] ."/login/oauth2/token";
 $postdata =  array(
-		"client_id" => 10000000000369,
+		"client_id" => $developerID,
 		"redirect_uri" => "https://apps.ats.udel.edu/git/canvas/get_temp_token.php",
-		"client_secret" => "st1FSMA3hgkysbeE4ajmb4YPmy4nFRvfB9RfWaev7kKCSWswq4DR7sNxQsKto8iN",
+		"client_secret" => $developerSecret,
 		"code" => $_REQUEST['code']
  
 	);
