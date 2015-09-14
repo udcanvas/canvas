@@ -31,7 +31,7 @@ function curl_post($url, array $post = NULL, array $options = array())
     return $result;
 } 
 
-
+require_once("/home/bkinney/includes/dkey.php");//this sits above the html root and provides my developer id and secret
 if($_REQUEST['error']){
 	die($_REQUEST['error']);
 }else if(isset($_REQUEST['code'])){
@@ -41,9 +41,9 @@ if(array_key_exists('state',$_REQUEST) && $_REQUEST['state'] != $_COOKIE['state'
 setcookie('state',null,-1,'/');
 $url = "https://" . $_COOKIE['domain'] ."/login/oauth2/token";
 $postdata =  array(
-		"client_id" => 10000000000369,
+		"client_id" => $developerID,
 		"redirect_uri" => "https://apps.ats.udel.edu/canvas/get_token_domain.php",
-		"client_secret" => "st1FSMA3hgkysbeE4ajmb4YPmy4nFRvfB9RfWaev7kKCSWswq4DR7sNxQsKto8iN",
+		"client_secret" => $developerSecret,
 		"code" => $_REQUEST['code']
  
 	);
